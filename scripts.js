@@ -24,17 +24,6 @@ planetLog.forEach((planet, index) => {
 
 
 // Step 3: Validate Planet Data
-// function validatePlanet(planet) {
-//     for (let key in planetLog) {
-//         if (planet[key] === null || planet[key] === undefined) {
-//             console.error(`Error: ${planet.name} has incomplete data!`)
-//             return;
-//         }
-//     }
-// }
-// validatePlanet("Adulthood");
-
-// Step 3: Validate Planet Data
 function validatePlanet(planet) {
     for (let key in planet) { // Loop through the properties of the planet object
         if (planet[key] === null || planet[key] === undefined) {
@@ -64,6 +53,23 @@ function getClosePlanets() {
 getClosePlanets();
 
 
+
+// function getClosePlanets() {
+//     const closePlanets = [];
+//     for (let i = 0; i < planetLog.length; i++) {
+//         const planet = planetLog[i];
+//         if (planet.distance < 200 && !planet.explored) {
+//             closePlanets.push(planet);
+//         }
+//     }
+//     if (closePlanets.length > 0) {
+//         console.table(closePlanets);
+//     } else {
+//         console.log("No close unexplored planets!");
+//     }
+// }
+
+
 // Step 5: Mark a Planet as Explored
 function markExplored(name) {
     if (!name) {
@@ -84,3 +90,22 @@ function markExplored(name) {
 markExplored("Venus"); // Marks Venus as explored
 markExplored(""); // Logs "Please provide a valid planet name!"
 markExplored("Pluto"); // Logs "Planet not in log!"
+
+
+
+
+
+// Step 2: Loop Through the Playlist
+// -Objective: Use a `for`, `while`, or `for...of` loop to log a formatted string for each song.
+
+// - **Example Output**:  
+//   `"Now playing: Sweet Dreams by Eurythmics (4:54) - Genre: Pop"`
+// - **Challenge**: Try a loop type you’re less familiar with!
+
+// for ( let i = 0; i<playlist.length; i++) {
+//    const play=playlist[i]
+// }
+
+// planetLog.forEach((play => {
+//     return `welcome to ${name} `
+// }))
